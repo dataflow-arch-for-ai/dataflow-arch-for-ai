@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Environment
+.venv/
+venv/
+env/
+.env
+
+# Jupyter
+*.ipynb_checkpoints
+
+# Student submissions (should never be committed)
+submission.json
+**/submissions/
+
+# Local Colab / cache artifacts
+.cache/
+*.pt
+*.bin
+*.safetensors
+models/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# LaTeX / build artifacts (for lecture slides)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# NOTE: solution notebooks live in a SEPARATE private repo
+# (dataflow-arch-for-ai-solutions), never in this public repo. No gitignore
+# guardrail is needed here because solutions should never be present at all.
+# If you find yourself adding `labs/**/solution/` to ignore something, you've
+# likely cloned the wrong repo or copied content from the wrong directory.
