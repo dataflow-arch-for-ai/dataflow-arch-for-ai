@@ -1,127 +1,87 @@
-# Dataflow Architectures for AI — Course Materials
+# Dataflow Architectures for AI
 
-**Instructor**: Dr. Kaoutar El Maghraoui — Principal Research Scientist, IBM Research; Adjunct Professor of Computer Science, Columbia University
+Public course materials for *Dataflow Architectures for AI: From Principles to Practice*, a 6-week course on reasoning across AI accelerator architectures (GPU, TPU, Cerebras, Groq, IBM Spyre) using dataflow execution as the common lens.
 
-This repository contains the public course materials for **Dataflow Architectures for AI: From Principles to Practice** — a 6-week professional course on reasoning across AI accelerator architectures (GPU, TPU, Cerebras, Groq, IBM Spyre) using dataflow execution as the unifying lens.
+**Instructor:** Dr. Kaoutar El Maghraoui, Principal Research Scientist, IBM Research; Adjunct Professor of Computer Science, Columbia University
 
----
+This repository holds the student-facing labs and reference material. Solution notebooks, grading keys, and quiz answers are kept in a separate private repository and are not published here.
 
 ## Quick start
 
-All core labs run on **Google Colab** with free-tier GPU runtime. No proprietary hardware access required.
+Every lab runs on Google Colab with a free-tier GPU (T4). No proprietary hardware is required. Open a lab by clicking its badge:
 
-| Week | Lab | Open in Colab |
-|------|-----|---|
-| 1 | Profiling LLM Inference Across Hardware | `labs/week-01-profiling/starter/lab1_profiling_starter.ipynb` |
-| 2 | Visualizing Transformer Dataflow | `labs/week-02-fx-graph/starter/lab2_fx_graph_starter.ipynb` |
-| 3 | *(Coming soon)* Exploring Compilation Pipelines | — |
-| 4 | *(Coming soon)* Profiling Memory Access Patterns | — |
-| 5 | *(Coming soon)* Debugging LLM Failures | — |
-| 6 | *(Coming soon)* Applying Roofline Analysis | — |
+| Week | Topic | Lab | Open |
+|------|-------|-----|------|
+| 1 | The Accelerator Landscape | Profiling LLM Inference Across Hardware | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/gpu-labs/student/Lab1_Profiling_Inference_STUDENT.ipynb) |
+| 2 | Dataflow Execution Models | Visualizing Transformer Dataflow | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/gpu-labs/student/Lab2_Transformer_Dataflow_STUDENT.ipynb) |
+| 3 | Compilation for Dataflow | Compiling Models for Dataflow Execution | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/gpu-labs/student/Lab3_Compiling_for_Dataflow_STUDENT.ipynb) |
+| 4 | Memory Systems | Profiling Memory Access Patterns in LLMs | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/gpu-labs/student/Lab4_Profiling_Memory_Access_STUDENT.ipynb) |
+| 5 | Debugging Across the Dataflow Stack | Debugging the Compilation Stack | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/gpu-labs/student/Lab5_Debugging_Compilation_Stack_STUDENT.ipynb) |
+| 6 | Performance Modeling | Roofline Analysis for LLM Inference | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/gpu-labs/student/Lab6_Roofline_Analysis_STUDENT.ipynb) |
 
-> **Note**: Colab "Open in Colab" badge URLs are added once the repo is pushed to GitHub. Replace `REPLACE-WITH-GITHUB-URL` in this README with your actual URL.
+Set the runtime before running a lab: in Colab, **Runtime > Change runtime type > T4 GPU**. The first cell installs dependencies and checks that a GPU is visible.
 
----
+All labs use `Qwen/Qwen2.5-0.5B-Instruct` (Lab 4 also uses `distilgpt2`). Both are public models that download automatically; no access tokens are needed.
 
-## How to use this repository
+## How the labs work
 
-### For students
-1. Fork or clone the repo.
-2. Each week: open the lab in `labs/week-NN-*/starter/` in Colab.
-3. Complete the `TODO` markers. Every **Checkpoint** cell must pass (no `AssertionError`).
-4. Fill in every `**YOUR ANALYSIS HERE**` section — those are peer-reviewed.
-5. Run the final `submission.json` cell and upload the resulting file through the course portal.
+Each notebook follows the same structure:
 
-### For instructors / TAs
-Solution notebooks, grading rubrics, and "common mistakes" guides live in the separate **`dataflow-arch-for-ai-solutions`** private repository. Request access via the IBM Research academic partnership program.
+1. An environment check that fails early if the GPU runtime is missing.
+2. Numbered parts with `TODO` markers for you to complete.
+3. `Checkpoint` cells with `assert` statements that must pass (no `AssertionError`) once your code is correct.
+4. A row you add to the Accelerator Landscape Map from your own measurements.
+5. A results cell that writes a JSON file.
 
----
+To get feedback on a lab, run the final results cell, copy the JSON it prints into the grader notebook on Coursera Labs, and run that notebook. The grader reports self-assessment points. Those points are feedback on how the lab went, not a grade. The graded item each week is the Concept Check quiz on Coursera.
 
-## Course design
-
-A few principles shape this course:
-
-- **Dataflow-first, vendor-second.** Every concept introduced as a general principle before any specific system is named. Spyre, TPU, Cerebras, and Groq appear as comparison points, never the subject.
-- **Comparative throughout.** Each week includes side-by-side analysis across at least three architectures. The *Accelerator Landscape Map* (see `resources/landscape-map.md`) is a running artifact that grows across all six weeks.
-- **Code in every module.** Core labs run 90–120 minutes. Students write and run real code.
-- **Two-tier labs.** Core labs are mandatory and run on Colab. Optional **Dataflow Deep Dive** sections extend the same work to Spyre hardware for students in partnered programs.
-- **Open-source only in the required path.** Every tool in the core labs is open-source and works anywhere.
-
----
+Do not edit the `Checkpoint` cells or the results cell. They define how the lab is checked.
 
 ## Repository structure
 
 ```
 dataflow-arch-for-ai/
-├── README.md                              # this file
-├── SYLLABUS.md                            # polished course description
-├── LICENSE.md                             # CC-BY-4.0 for materials, MIT for code
-├── .github/workflows/
-│   └── smoke-test-notebooks.yml           # CI: runs every student notebook nightly
-│
-├── lectures/                              # slides, notes, readings per week
-│   ├── week-01-landscape/
-│   ├── week-02-dataflow/
-│   └── ...
-│
-├── labs/                                  # Colab-ready notebooks
-│   ├── week-01-profiling/
-│   │   ├── README.md                      # lab objectives, grading, submission
-│   │   ├── starter/
-│   │   │   └── lab1_profiling_starter.ipynb
-│   │   └── optional_spyre/
-│   │       └── lab1_spyre_extension.ipynb
-│   ├── week-02-fx-graph/
-│   └── ...
-│
-├── resources/
-│   ├── landscape-map.md                   # evolving reference table, updated each week
-│   ├── debugging-taxonomy.md              # the 8-layer model (published in Week 5)
-│   ├── reading-list.md
-│   └── glossary.md
-│
-├── assessments/
-│   ├── quiz-week-1.md
-│   ├── ...
-│   └── final-portfolio.md                 # cross-lab capstone rubric
-│
-└── docs/
-    ├── getting-started.md
-    ├── colab-setup.md                     # GPU runtime, quota tips, common errors
-    └── contributing.md
+├── README.md
+├── gpu-labs/
+│   └── student/                 # the six labs, one per week
+│       ├── Lab1_Profiling_Inference_STUDENT.ipynb
+│       ├── Lab2_Transformer_Dataflow_STUDENT.ipynb
+│       ├── Lab3_Compiling_for_Dataflow_STUDENT.ipynb
+│       ├── Lab4_Profiling_Memory_Access_STUDENT.ipynb
+│       ├── Lab5_Debugging_Compilation_Stack_STUDENT.ipynb
+│       └── Lab6_Roofline_Analysis_STUDENT.ipynb
+└── resources/
+    └── landscape-map.md         # the running reference table, extended each week
 ```
 
-**Solutions live in a separate private repository** (`dataflow-arch-for-ai-solutions`), not in this public repo. This is intentional: GitHub branch protection prevents writes but not reads, so a "solutions" branch on a public repo would still be publicly visible. Two separate repositories with independent access control are the only way to actually hide solution content from students.
+## Accelerator Landscape Map
 
----
+`resources/landscape-map.md` is a reference table built across the six weeks. Each lab adds a row or cell from values you measure, not from vendor specifications. Keep your own copy and record the batch size, sequence length, and Colab GPU for every measurement, since numbers without that context are not comparable.
 
-## Citation
+## Solutions
 
-If you use or adapt these materials for your own teaching, please cite:
+Solution notebooks, grading rubrics, and quiz answers live in a separate private repository, `dataflow-arch-for-ai-solutions`. They are not in this public repo and are not reachable from it. Instructors and TAs can request access through the IBM Research academic partnership program.
 
-```
-El Maghraoui, K. (2026). Dataflow Architectures for AI: From Principles to Practice.
-IBM Research / Columbia University. https://github.com/REPLACE-WITH-GITHUB-URL
-```
+## Teaching staff
 
-A `CITATION.cff` file is included for automated citation tools.
-
----
+- Instructor and course author: Dr. Kaoutar El Maghraoui, Principal Research Scientist, IBM Research; Adjunct Professor of Computer Science, Columbia University
+- Lab instructor: Dr. Rashed Z. Bhatti, IBM Research (contributor to the lab notebooks)
 
 ## License
 
-- **Course materials** (lecture notes, slide decks, README files, rubrics): **CC-BY-4.0**
-- **Code** (notebooks, scripts): **MIT License**
+- Course materials (README, reference tables, written prompts): CC-BY-4.0
+- Code (notebooks, scripts): MIT
 
-See `LICENSE.md` for full text.
+## Citation
 
----
+```
+El Maghraoui, K. (2026). Dataflow Architectures for AI: From Principles to Practice.
+IBM Research.
+https://github.com/dataflow-arch-for-ai/dataflow-arch-for-ai
+```
 
 ## Contact
 
-For course-related questions: use GitHub Issues.
-For Spyre hardware access or institutional partnerships: IBM Research academic partnerships program.
+Use GitHub Issues for course-related questions. For Spyre hardware access or institutional partnerships, contact the IBM Research academic partnerships program.
 
----
-
-*© 2026 Dr. Kaoutar El Maghraoui. Materials developed in collaboration with IBM Research and Columbia University Fu Foundation School of Engineering and Applied Science.*
+© 2026 Dr. Kaoutar El Maghraoui. Developed with IBM Research.
