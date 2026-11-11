@@ -1,12 +1,12 @@
 # Accelerator Landscape Map
 
-A running reference built across the six weeks of the course. **Every week adds rows or cells.** By Week 6 this table contains your working mental model of the five architectures.
+A running reference built across the six weeks of the course. Every week adds rows or cells, so by Week 6 the table covers all five architectures across the main dimensions of the course.
 
-The map is not vendor marketing. Each cell is something either observed in lecture or measured in a lab. Shaded rows (marked 🔶) indicate dataflow-first systems.
+Each cell records something observed in lecture or measured in a lab, not a vendor specification. Shaded rows (marked 🔶) indicate dataflow-first systems.
 
 ---
 
-## Week 1 — Execution model, memory hierarchy, programming model
+## Week 1: Execution model, memory hierarchy, programming model
 
 | | **GPU (NVIDIA)** | **TPU (Google)** 🔶 | **Cerebras** 🔶 | **Groq** 🔶 | **Spyre / AIU (IBM)** 🔶 |
 |---|---|---|---|---|---|
@@ -20,7 +20,7 @@ The map is not vendor marketing. Each cell is something either observed in lectu
 
 ---
 
-## Week 2 — Graph representation and scheduling (added in Lab 2)
+## Week 2: Graph representation and scheduling (added in Lab 2)
 
 | | **GPU (NVIDIA)** | **TPU (Google)** 🔶 | **Cerebras** 🔶 | **Groq** 🔶 | **Spyre / AIU (IBM)** 🔶 |
 |---|---|---|---|---|---|
@@ -33,7 +33,7 @@ The map is not vendor marketing. Each cell is something either observed in lectu
 
 ---
 
-## Week 3 — Compilation passes (to be added)
+## Week 3: Compilation passes (to be added)
 
 Column sketch for Week 3:
 
@@ -46,7 +46,7 @@ Column sketch for Week 3:
 
 ---
 
-## Week 4 — Memory system details (to be added)
+## Week 4: Memory system details (to be added)
 
 | | GPU | TPU 🔶 | Cerebras 🔶 | Groq 🔶 | Spyre 🔶 |
 |---|---|---|---|---|---|
@@ -57,13 +57,13 @@ Column sketch for Week 3:
 
 ---
 
-## Week 5 — Failure modes (to be added)
+## Week 5: Failure modes (to be added)
 
 The **8-layer debugging taxonomy** populates this section. Each row maps to a failure layer; each column records what the signal looks like on that architecture.
 
 ---
 
-## Week 6 — Roofline positions (to be added)
+## Week 6: Roofline positions (to be added)
 
 Each architecture has a different ridge point (AI where memory-bound transitions to compute-bound). Week 6 lab measures these and plots them.
 
@@ -79,8 +79,8 @@ Each architecture has a different ridge point (AI where memory-bound transitions
 
 After each lab, students should update their *personal copy* of this file with the values they measured. The shared copy in the repo is the reference version.
 
-When updating: **cite your lab run** — include batch size, sequence length, and which Colab GPU you were assigned. Measurements without these are meaningless.
+When updating: **cite your lab run**: include batch size, sequence length, and which Colab GPU you were assigned. Measurements without these are meaningless.
 
 ---
 
-*Course: Dataflow Architectures for AI · © 2026 Dr. Kaoutar El Maghraoui*
+*Course: Dataflow Architectures for AI, © 2026 Dr. Kaoutar El Maghraoui*
