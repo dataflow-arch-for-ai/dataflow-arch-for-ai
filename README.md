@@ -60,6 +60,7 @@ Short notebooks that go with the lecture videos. They have no TODOs or checkpoin
 | 5 | Module 3: Observability across the stack | Find a recompile storm with tlparse | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week5/Recompile_Storm_Demo_Colab.ipynb) |
 | 5 | Module 5: Comparison against a baseline | First divergence with forward hooks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week5/First_Divergence_Demo_Colab.ipynb) |
 | 6 | Module 1: Roofline analysis | Bound one decode step | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week6/Decode_Step_Bound_Demo_Colab.ipynb) |
+| 6 | Module 2: Bytes per memory level | One kernel, two memory levels | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week6/Memory_Levels_Demo_Colab.ipynb) |
 | 6 | Module 3: The overhead term | Profile a decode loop, from slow to fixed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week6/Decode_Loop_Profile_Demo_Colab.ipynb) |
 | 6 | Module 4: Benchmarking and the cost model | Four ways to benchmark wrong | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week6/Benchmarking_Rules_Demo_Colab.ipynb) |
 | 6 | Module 5: The serving runtime | Buckets and warmup | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week6/Buckets_And_Warmup_Demo_Colab.ipynb) |
@@ -83,7 +84,7 @@ dataflow-arch-for-ai/
 │   ├── week3/                   # 3 demos
 │   ├── week4/                   # 3 demos
 │   ├── week5/                   # 4 demos, including Provenance_Demo_Colab.ipynb
-│   └── week6/                   # 4 demos
+│   └── week6/                   # 5 demos
 └── resources/
     └── landscape-map.md         # the running reference table, extended each week
 ```
