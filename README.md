@@ -39,11 +39,30 @@ Do not edit the `Checkpoint` cells or the results cell. They define how the lab 
 
 ## Demos
 
-Short notebooks that go with the lecture videos. They have no TODOs or checkpoints. Run them to see a tool on a real run.
+Short notebooks that go with the lecture videos. They have no TODOs or checkpoints. Run them to see a tool on a real run. Each notebook says which lecture slides it follows, runs on a free Colab T4 unless it says otherwise, and takes one to three minutes.
 
 | Week | Module | Demo | Open |
 |------|--------|------|------|
+| 1 | Module 1: Why accelerators | Amdahl's law on a real forward pass | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week1/Amdahl_Forward_Pass_Demo_Colab.ipynb) |
+| 1 | Module 2: Where scheduling decisions live | A systolic array, cycle by cycle | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week1/Systolic_Array_Cycles_Demo_Colab.ipynb) |
+| 1 | Module 4: The programming stack | Same matmul, five precisions | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week1/Numeric_Formats_Demo_Colab.ipynb) |
+| 2 | Module 1: The dataflow execution model | Fire an attention graph | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week2/Dataflow_Firing_Demo_Colab.ipynb) |
+| 2 | Module 2: Graph capture in real frameworks | Guards and recompiles | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week2/Guards_And_Recompiles_Demo_Colab.ipynb) |
+| 2 | Module 5: Spyre and tile languages | A tile, not a thread: Triton kernels | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week2/Triton_Tiles_Demo_Colab.ipynb) |
+| 3 | Module 1: The PyTorch frontend | Launch overhead and CUDA Graphs | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week3/Launch_Overhead_Demo_Colab.ipynb) |
+| 3 | Module 2: Intermediate representations | One function, three IRs | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week3/Three_IRs_Demo_Colab.ipynb) |
+| 3 | Module 4: XLA on TPU | HLO from JAX | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week3/JAX_HLO_Demo_Colab.ipynb) |
+| 4 | Module 2: Prefill, decode and ridge points | Decode is memory-bound | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week4/Decode_Batch_Sweep_Demo_Colab.ipynb) |
+| 4 | Module 5: Tiling, layout and FlashAttention | What FlashAttention saves | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week4/FlashAttention_Memory_Demo_Colab.ipynb) |
+| 4 | Module 7: Serving and the KV cache | PagedAttention in a hundred lines | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week4/Paged_KV_Simulator_Demo_Colab.ipynb) |
+| 5 | Module 1: Debugging compiled programs | The error is not where it happened | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week5/Error_At_Next_Sync_Demo_Colab.ipynb) |
 | 5 | Module 3: Observability across the stack | Kernel provenance with torch.compile and tlparse | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week5/Provenance_Demo_Colab.ipynb) |
+| 5 | Module 3: Observability across the stack | Find a recompile storm with tlparse | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week5/Recompile_Storm_Demo_Colab.ipynb) |
+| 5 | Module 5: Comparison against a baseline | First divergence with forward hooks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week5/First_Divergence_Demo_Colab.ipynb) |
+| 6 | Module 1: Roofline analysis | Bound one decode step | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week6/Decode_Step_Bound_Demo_Colab.ipynb) |
+| 6 | Module 3: The overhead term | Profile a decode loop, from slow to fixed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week6/Decode_Loop_Profile_Demo_Colab.ipynb) |
+| 6 | Module 4: Benchmarking and the cost model | Four ways to benchmark wrong | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week6/Benchmarking_Rules_Demo_Colab.ipynb) |
+| 6 | Module 5: The serving runtime | Buckets and warmup | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week6/Buckets_And_Warmup_Demo_Colab.ipynb) |
 
 ## Repository structure
 
@@ -58,9 +77,13 @@ dataflow-arch-for-ai/
 │       ├── Lab4_Profiling_Memory_Access_STUDENT.ipynb
 │       ├── Lab5_Debugging_Compilation_Stack_STUDENT.ipynb
 │       └── Lab6_Roofline_Analysis_STUDENT.ipynb
-├── demos/
-│   └── week5/
-│       └── Provenance_Demo_Colab.ipynb   # module 3 provenance demo
+├── demos/                       # demo notebooks for the lecture videos, listed in the Demos table
+│   ├── week1/                   # 3 demos
+│   ├── week2/                   # 3 demos
+│   ├── week3/                   # 3 demos
+│   ├── week4/                   # 3 demos
+│   ├── week5/                   # 4 demos, including Provenance_Demo_Colab.ipynb
+│   └── week6/                   # 4 demos
 └── resources/
     └── landscape-map.md         # the running reference table, extended each week
 ```
