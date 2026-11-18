@@ -37,6 +37,14 @@ To get feedback on a lab, run the final results cell, copy the JSON it prints in
 
 Do not edit the `Checkpoint` cells or the results cell. They define how the lab is checked.
 
+## Demos
+
+Short notebooks that go with the lecture videos. They have no TODOs or checkpoints. Run them to see a tool on a real run.
+
+| Week | Module | Demo | Open |
+|------|--------|------|------|
+| 5 | Module 3: Observability across the stack | Kernel provenance with torch.compile and tlparse | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dataflow-arch-for-ai/dataflow-arch-for-ai/blob/main/demos/week5/Provenance_Demo_Colab.ipynb) |
+
 ## Repository structure
 
 ```
@@ -50,6 +58,9 @@ dataflow-arch-for-ai/
 │       ├── Lab4_Profiling_Memory_Access_STUDENT.ipynb
 │       ├── Lab5_Debugging_Compilation_Stack_STUDENT.ipynb
 │       └── Lab6_Roofline_Analysis_STUDENT.ipynb
+├── demos/
+│   └── week5/
+│       └── Provenance_Demo_Colab.ipynb   # module 3 provenance demo
 └── resources/
     └── landscape-map.md         # the running reference table, extended each week
 ```
