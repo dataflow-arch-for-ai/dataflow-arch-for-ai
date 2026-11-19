@@ -95,7 +95,7 @@ dataflow-arch-for-ai/
 
 ## Solutions
 
-Solution notebooks, grading rubrics, and quiz answers live in a separate private repository, `dataflow-arch-for-ai-solutions`. They are not in this public repo and are not reachable from it. Instructors and TAs can request access through the IBM Research academic partnership program.
+Solution notebooks, grading rubrics, and quiz answers live in a separate private repository, `dataflow-arch-for-ai-solutions`. They are not in this public repo and are not reachable from it. The course is maintained by the instructor, and the solutions are not distributed.
 
 ## Teaching staff
 
